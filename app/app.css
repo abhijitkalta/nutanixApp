@@ -1,0 +1,59 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.discount {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #6C7A89;
+  border-radius: 100%;
+  padding: 35px 20px 35px 20px;
+  background-color: #b3c8ce
+
+}
+
+.background-linear{
+
+
+background: #8e9eab; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.letters{
+  font-family: verdana;
+  color: #95A5A6;
+}
+
+#block:hover {
+  box-shadow: 5px 5px 5px #757D75;
+}

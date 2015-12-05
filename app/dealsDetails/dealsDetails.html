@@ -1,0 +1,36 @@
+
+
+<div class="panel panel-default" id="block" ng-repeat="deals in deals" style="display: inline-block; width: 31%; margin: 10px">
+  <div class="panel-heading">
+    <i class="fa fa-chevron-circle-right"></i>
+    <span style="font-family: Verdana; font-size: 16px; color: #F62459">{{deals.name}}</span>
+    <br />
+    <i class="fa fa-user"></i>
+    <span style="font-family: Verdana; font-size: 12px; color: #DB5A6B">Provider: {{deals.provider}}</span>
+  </div>
+  <div class="panel-body" style="background-color: #d9e4e6">
+    <div class="container" style="margin: 5px 2px 5px 1px">
+
+      <img ng-src="{{deals.image}}" alt="Deals" height="150px" width="150px" style="border: 2px inset #317589; box-shadow: 2px 2px 1px #F2F1EF; margin-right: 20px; float: left; border-radius: 20px"/>
+      <ul style="list-style-type: none">
+        <li style="margin: 3px 2px"> <uib-rating ng-model="deals.rating"></uib-rating>{{deals.rating}} </li>
+        <li style="margin: 3px 2px" class="letters"><i class="fa fa-link"></i>
+          Link: <a href="{{deals.link}}" target="_blank" syle="text-wrap: elipsis">Click Here</a>
+        </li>
+        <li style="margin: 3px 2px" class="letters">Actual Price: <del>{{deals.actual_price}}</del></li>
+        <li style="margin: 3px 2px" class="letters"><i class="fa fa-tag"></i>
+          Final price: {{deals.final_price}}
+        </li>
+        <li style="margin: 3px 2px;">
+            <div class="discount" style="color: #1F4788; font-weight: bold">{{deals.discount}} Off</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel-footer">
+    <a href=""  ng-click="addToCache(deals.name)">
+      <span class="glyphicon glyphicon-thumbs-up"></span> Likes {{getFromCache(deals.name)}}
+    </a>
+  </div>
+</div>

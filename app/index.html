@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="zoomTrackerApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="zoomTrackerApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="zoomTrackerApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="nutanixApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nutanix App</title>
+  <meta name="description" content="Nutanix App">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="components/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="components/bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="components/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="components/bower_components/font-awesome/css/font-awesome.min.css">
+  <script src="components/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="dealsDetailsController" class="background-linear">
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<div class="container">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><span style="color: #95A5A6; font-size: 20px; font-family: Verdana;">Nutanix Deals Hub </span><small style="color: #ABB7B7; font-family: Verdana;"> - finding deals made easy </small> </a>
+
+      </div>
+      <div style="float: right;">
+        <div class="panel panel-default" style="margin-top:5px">
+          <div class="panel-body" style="color: #ABB7B7; font-family: Verdana;">
+            Api Hits : {{apiHits}} |
+            Total Likes : {{total_likes()}}
+          </div>
+        </div>
+      </div>
+    </div>
+    </nav>
+  </div>
+<div class="container"
+  <div ng-view></div>
+</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="components/bower_components/jquery/dist/jquery.js"></script>
+  <script src="components/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="components/bower_components/angular/angular.js"></script>
+  <script src="components/bower_components/angular-route/angular-route.js"></script>
+  <script src="components/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="components/bower_components/angular-cache/dist/angular-cache.js"></script>
+  <script src="components/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
+
+  <script src="app.js"></script>
+  <script src="dealsdetails/dealsDetailsController.js"></script>
+  <script src="components/version/myCache.js"></script>
+  <script src="components/version/dealsData.js"></script>
+
+</body>
+</html>
